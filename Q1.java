@@ -1,4 +1,4 @@
-package question_1;
+
 /**
  * Code for Advent of Code Q1a
  * Author: Lucas Sherlock

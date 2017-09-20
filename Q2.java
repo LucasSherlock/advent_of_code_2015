@@ -35,8 +35,10 @@ public class Q2 {
 				total_ribbon += findRibbonLength(height,width,length);
 			}
 			
+
 			System.out.println("Total ribbon length: " + total_ribbon);
 			System.out.println("Total wrapping paper area: " + total_paper);
+
 			
 		} catch(IOException e) {
 			e.printStackTrace();

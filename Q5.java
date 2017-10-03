@@ -9,7 +9,8 @@ public class Q5 {
 	private static final String _vowels = "aeiou";
 	private static final String[] _badStrings = new String[]{"ab","cd","pq","xy"};
 	public static void main(String[] args) {
-		int goodStrings = 0;
+		int goodAStrings = 0;
+		int goodBStrings = 0;
 		String input = null;
 		FileReader fr = null;
 		BufferedReader br = null;
@@ -19,24 +20,37 @@ public class Q5 {
 			br = new BufferedReader(fr);
 			
 			while((input = br.readLine()) != null) {
-				if(isGood(input)) {
-					goodStrings++;
+				if(isGoodA(input)) {
+					goodAStrings++;
+				}
+				
+				if(isGoodB(input)) {
+					goodBStrings++;
 				}
 			}
 			
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
-		System.out.println(goodStrings);
+		System.out.println("# nice strings by definition A is: " + goodAStrings);
+		System.out.println("# nice strings by definition B is: " + goodBStrings);
 		
 	}
 	
-	public static boolean isGood(String input) {
-		boolean isGood = false;
+	public static boolean isGoodA(String input) {
+		boolean isGoodA = false;
 		if(containsThreeVowels(input) && noBadStrings(input) && containsRepeat(input)) {
-			isGood = true; 
+			isGoodA = true; 
 		}
-		return isGood;
+		return isGoodA;
+	}
+	
+	public static boolean isGoodB(String input) {
+		boolean isGoodB = false;
+		if(containsRepeatedPair(input) && containsGapRepeat(input)) {
+			isGoodB = true;
+		}
+		return isGoodB;
 	}
 	
 	public static boolean containsRepeat(String input) {
@@ -75,4 +89,30 @@ public class Q5 {
 		return hasThreeVowels;
 	}
 	
+	public static boolean containsRepeatedPair(String input) {
+		boolean hasRepeatedPair = false;
+		String pair = null;
+		int index = -1;
+		
+		for(int i = 0; i < (input.length() - 3); i++) {
+			pair = input.substring(i, i+2);
+			index = input.lastIndexOf(pair);
+			if(index != -1 && index != i && index != i+1) {
+				hasRepeatedPair = true;
+				break;
+			}
+			
+		}
+		return hasRepeatedPair;
+	}
+	public static boolean containsGapRepeat(String input) {
+		boolean hasGapRepeat = false;
+		for(int i = 0; i < (input.length() - 2); i++) {
+			if(input.charAt(i) == input.charAt(i+2)) {
+				hasGapRepeat = true;
+				break;
+			}
+		}
+		return hasGapRepeat;
+	}
 }

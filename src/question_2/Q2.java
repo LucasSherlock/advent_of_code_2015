@@ -1,10 +1,12 @@
+package question_2;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.lang.Math;
 
 /**
- * Code for Advent of Code Day 2
+ * Code for AoC 2015 Q3
  * @author Lucas Sherlock
  */
 public class Q2 {
@@ -35,10 +37,8 @@ public class Q2 {
 				total_ribbon += findRibbonLength(height,width,length);
 			}
 			
-
 			System.out.println("Total ribbon length: " + total_ribbon);
 			System.out.println("Total wrapping paper area: " + total_paper);
-
 			
 		} catch(IOException e) {
 			e.printStackTrace();

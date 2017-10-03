@@ -3,6 +3,14 @@ package question_4;
 import java.security.*;
 import java.math.*;
 
+
+/**
+ * Code for AoC 2015 Q4
+ * Has 1 argument, an integer which is the number of leading zeros to check for.
+ * 
+ * @author Lucas Sherlock
+ *
+ */
 public class Q4 {
 	public static final String INPUT = "ckczppom";
 	public static String _hexString;

@@ -1,10 +1,12 @@
+package question_3;
+
 import java.util.ArrayList;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
 /**
- * Code for Day 3
+ * Code for AoC 2015 Q3
  * @author Lucas Sherlock
  *
  */

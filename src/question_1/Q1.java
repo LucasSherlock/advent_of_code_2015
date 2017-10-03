@@ -1,6 +1,6 @@
-
+package question_1;
 /**
- * Code for Advent of Code Q1a
+ * Code for AoC 2015 Q1
  * Author: Lucas Sherlock
  */
 import java.io.BufferedReader;

@@ -3,6 +3,12 @@ package question_5;
 import java.io.BufferedReader;
 import java.io.FileReader;
 
+/**
+ * Code for AoC 2015 Q5
+ * 
+ * @author Lucas Sherlock
+ *
+ */
 public class Q5 {
 
 	private static final String INPUT = "AoC15_Q5_input.txt";
